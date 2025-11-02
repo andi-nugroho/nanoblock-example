@@ -1,0 +1,18 @@
+[package]
+name = "nano-block-example-ebpf"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+nano-block-example-common = { path = "../nano-block-example-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+nano-block-ebpf = { workspace = true }
+network-types = { workspace = true }
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "nano-block-example"
+path = "src/main.rs"
